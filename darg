@@ -1,0 +1,20 @@
+var enableDrag=false;
+		game.canvas.addEventListener("mousedown",function(e){
+			var x=e.offsetX;
+			var y=e.offsetY;
+			enableDrag=true;
+		});
+		game.canvas.addEventListener('mousemove',function(e){
+			var x=e.offsetX;
+			var y=e.offsetY;
+			if(enableDrag){
+				ball.x=x;
+				ball.y=y;
+				console.log(x,y)
+			}
+		})
+		game.canvas.addEventListener('mouseup',function(e){
+			var x=e.offsetX;
+			var y=e.offsetY;
+			enableDrag=false;
+		})
